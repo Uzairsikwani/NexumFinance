@@ -1,0 +1,47 @@
+{
+  "name": "SecurityLog",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "event_type": {
+      "type": "string",
+      "enum": [
+        "login",
+        "logout",
+        "password_change",
+        "device_added",
+        "large_withdrawal_attempt",
+        "kyc_update",
+        "automation_toggle",
+        "emergency_stop"
+      ]
+    },
+    "ip_address": {
+      "type": "string"
+    },
+    "device_info": {
+      "type": "string"
+    },
+    "location": {
+      "type": "string"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "success",
+        "failed",
+        "blocked",
+        "pending_review"
+      ]
+    },
+    "details": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "user_email",
+    "event_type"
+  ]
+}
