@@ -1,0 +1,65 @@
+{
+  "name": "Transaction",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "transaction_type": {
+      "type": "string",
+      "enum": [
+        "deposit",
+        "withdrawal",
+        "buy_crypto",
+        "sell_crypto",
+        "buy_stock",
+        "sell_stock",
+        "inr_to_usdt",
+        "usdt_to_inr"
+      ]
+    },
+    "asset": {
+      "type": "string"
+    },
+    "quantity": {
+      "type": "number"
+    },
+    "price_per_unit": {
+      "type": "number"
+    },
+    "total_amount_inr": {
+      "type": "number"
+    },
+    "fees_inr": {
+      "type": "number"
+    },
+    "exchange_rate": {
+      "type": "number"
+    },
+    "status": {
+      "type": "string",
+      "enum": [
+        "pending",
+        "processing",
+        "completed",
+        "failed",
+        "cancelled"
+      ],
+      "default": "pending"
+    },
+    "transaction_hash": {
+      "type": "string"
+    },
+    "notes": {
+      "type": "string"
+    },
+    "risk_acknowledged": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_email",
+    "transaction_type"
+  ]
+}
