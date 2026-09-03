@@ -1,0 +1,88 @@
+{
+  "name": "KYCProfile",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string",
+      "description": "User's email address"
+    },
+    "mobile_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "mobile_number": {
+      "type": "string"
+    },
+    "email_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "pan_number": {
+      "type": "string"
+    },
+    "pan_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "pan_name": {
+      "type": "string"
+    },
+    "aadhaar_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "aadhaar_last_four": {
+      "type": "string"
+    },
+    "selfie_verified": {
+      "type": "boolean",
+      "default": false
+    },
+    "selfie_url": {
+      "type": "string"
+    },
+    "liveness_check_passed": {
+      "type": "boolean",
+      "default": false
+    },
+    "risk_profile": {
+      "type": "string",
+      "enum": [
+        "not_assessed",
+        "conservative",
+        "balanced",
+        "aggressive"
+      ],
+      "default": "not_assessed"
+    },
+    "risk_score": {
+      "type": "number"
+    },
+    "kyc_status": {
+      "type": "string",
+      "enum": [
+        "not_started",
+        "in_progress",
+        "pending_review",
+        "approved",
+        "rejected"
+      ],
+      "default": "not_started"
+    },
+    "kyc_completion_percentage": {
+      "type": "number",
+      "default": 0
+    },
+    "terms_accepted": {
+      "type": "boolean",
+      "default": false
+    },
+    "risk_disclosure_accepted": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}
