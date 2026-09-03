@@ -1,0 +1,75 @@
+{
+  "name": "Portfolio",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "total_invested_inr": {
+      "type": "number",
+      "default": 0
+    },
+    "current_value_inr": {
+      "type": "number",
+      "default": 0
+    },
+    "crypto_holdings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "asset": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "avg_buy_price": {
+            "type": "number"
+          },
+          "current_price": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "stock_holdings": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "symbol": {
+            "type": "string"
+          },
+          "name": {
+            "type": "string"
+          },
+          "quantity": {
+            "type": "number"
+          },
+          "avg_buy_price": {
+            "type": "number"
+          },
+          "current_price": {
+            "type": "number"
+          }
+        }
+      }
+    },
+    "inr_balance": {
+      "type": "number",
+      "default": 0
+    },
+    "usdt_balance": {
+      "type": "number",
+      "default": 0
+    },
+    "risk_exposure_percentage": {
+      "type": "number",
+      "default": 0
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}
