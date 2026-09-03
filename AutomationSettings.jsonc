@@ -1,0 +1,58 @@
+{
+  "name": "AutomationSettings",
+  "type": "object",
+  "properties": {
+    "user_email": {
+      "type": "string"
+    },
+    "automation_enabled": {
+      "type": "boolean",
+      "default": false
+    },
+    "automation_unlocked": {
+      "type": "boolean",
+      "default": false
+    },
+    "max_capital_allocation_inr": {
+      "type": "number"
+    },
+    "max_loss_limit_percentage": {
+      "type": "number"
+    },
+    "emergency_stop_triggered": {
+      "type": "boolean",
+      "default": false
+    },
+    "active_strategies": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "strategy_id": {
+            "type": "string"
+          },
+          "strategy_name": {
+            "type": "string"
+          },
+          "allocation_percentage": {
+            "type": "number"
+          },
+          "status": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "risk_acknowledgement_date": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "last_execution_date": {
+      "type": "string",
+      "format": "date-time"
+    }
+  },
+  "required": [
+    "user_email"
+  ]
+}
